@@ -21,4 +21,20 @@ public class Partido {
         this.equipoContrincante = equipoContrincante;
         this.resultadoContrincante = resultadoContrincante;
     }
+
+    public Equipo getEquipoLocal() {
+        return equipoLocal;
+    }
+
+    public Integer getResultadoLocal() {
+        return resultadoLocal;
+    }
+
+    public Equipo getEquipoContrincante() {
+        return equipoContrincante;
+    }
+
+    public Integer getResultadoContrincante() {
+        return resultadoContrincante;
+    }
 }
