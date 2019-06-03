@@ -14,7 +14,7 @@ import java.util.Collections;
  */
 public class GestoraEquipo extends ArrayList<Equipo> {
     private final Equipo[] losEquipos;
-
+    
     public GestoraEquipo(Equipo[] losEquipos) {
         this.losEquipos = losEquipos;
     }
@@ -33,5 +33,9 @@ public class GestoraEquipo extends ArrayList<Equipo> {
     
     private int generaAletorio(int maximo) {
         return (int) (Math.random() * maximo);
+    }
+    
+    public Equipo[] getLosEquipos() {
+        return losEquipos;
     }
 }
