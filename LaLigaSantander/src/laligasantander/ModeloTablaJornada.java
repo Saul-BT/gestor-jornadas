@@ -5,7 +5,6 @@
  */
 package laligasantander;
 
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
