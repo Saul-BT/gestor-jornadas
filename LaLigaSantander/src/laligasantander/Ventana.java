@@ -5,6 +5,8 @@
  */
 package laligasantander;
 
+import java.util.Arrays;
+
 /**
  *
  * @author tarod
@@ -96,6 +98,7 @@ public class Ventana extends javax.swing.JFrame {
             }
         });
 
+        tablaClasificacion.setAutoCreateRowSorter(true);
         tablaClasificacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -140,6 +143,7 @@ public class Ventana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jpClasificacionComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jpClasificacionComponentShown
+        Arrays.sort(gestoraEquipos.getLosEquipos());
         tablaClasificacion.setModel(new ModeloTablaClasificacion(gestoraEquipos.getLosEquipos()));
     }//GEN-LAST:event_jpClasificacionComponentShown
 
