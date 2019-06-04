@@ -28,37 +28,33 @@ public class GestoraEquipo {
         Partido[] losPartidos = new Partido[numeroDeEquipos / 2];
 
         for (int i = 0, n = 0; i < numeroDeEquipos; i++, n++) {
-            Partido partidoActual = new Partido(listaEquipos.get(i), generaAletorio(4),
-                    listaEquipos.get(++i), generaAletorio(4));
-            losPartidos[n] = partidoActual;
-            procesarPartido(partidoActual);
+            Equipo equipoActualLocal = listaEquipos.get(i);
+            Equipo equipoActualContrincante = listaEquipos.get(++i);
+            int resultadoLocal = generaAletorio(4), resultadoContrincante = generaAletorio(4);
+            
+            losPartidos[n] = new Partido(equipoActualLocal, resultadoLocal,
+                    equipoActualContrincante, resultadoContrincante);
+            
+            actualizaEquipo(equipoActualLocal, resultadoLocal, resultadoContrincante);
+            actualizaEquipo(equipoActualContrincante, resultadoLocal, resultadoContrincante);
         }
 
         return losPartidos;
     }
 
-    private void procesarPartido(Partido partidoActual) {
-        Equipo equipoLocal = partidoActual.getEquipoLocal();
-        Equipo equipoContrincante = partidoActual.getEquipoContrincante();
-        int resultadoLocal = partidoActual.getResultadoLocal();
-        int resultadoContrincante = partidoActual.getResultadoContrincante();
-        boolean localGano = resultadoLocal > resultadoContrincante;
-        boolean localPerdio = resultadoLocal < resultadoContrincante;
+    private void actualizaEquipo(Equipo equipoActual, int golesAFavor, int golesEnContra) {
+        boolean localGano = golesAFavor > golesEnContra;
+        boolean localPerdio = golesAFavor < golesEnContra;
 
-        equipoLocal.setGolesAFavor(equipoLocal.getGolesAFavor() + resultadoLocal);
-        equipoLocal.setGolesEnContra(equipoLocal.getGolesEnContra() + resultadoContrincante);
-        equipoContrincante.setGolesAFavor(equipoContrincante.getGolesAFavor() + resultadoLocal);
-        equipoContrincante.setGolesEnContra(equipoContrincante.getGolesEnContra() + resultadoContrincante);
+        equipoActual.setGolesAFavor(equipoActual.getGolesAFavor() + golesAFavor);
+        equipoActual.setGolesEnContra(equipoActual.getGolesEnContra() + golesEnContra);
 
         if (localGano) {
-            equipoLocal.setPartidosGanados(equipoLocal.getPartidosGanados() + 1);
-            equipoContrincante.setPartidosPerdidos(equipoLocal.getPartidosPerdidos() + 1);
+            equipoActual.setPartidosGanados(equipoActual.getPartidosGanados() + 1);
         } else if (localPerdio) {
-            equipoContrincante.setPartidosGanados(equipoContrincante.getPartidosGanados() + 1);
-            equipoLocal.setPartidosPerdidos(equipoLocal.getPartidosPerdidos() + 1);
+            equipoActual.setPartidosPerdidos(equipoActual.getPartidosPerdidos() + 1);
         } else { // Si han empatado
-            equipoLocal.setPartidosEmpatados(equipoLocal.getPartidosEmpatados() + 1);
-            equipoContrincante.setPartidosEmpatados(equipoContrincante.getPartidosEmpatados() + 1);
+            equipoActual.setPartidosEmpatados(equipoActual.getPartidosEmpatados() + 1);
         }
     }
 
