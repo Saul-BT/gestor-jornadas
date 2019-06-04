@@ -5,14 +5,15 @@
  */
 package laligasantander;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 /**
  *
  * @author tarod
  */
-public class GestoraEquipo extends ArrayList<Equipo> {
+public class GestoraEquipo {
     private final Equipo[] losEquipos;
     
     public GestoraEquipo(Equipo[] losEquipos) {
@@ -20,13 +21,14 @@ public class GestoraEquipo extends ArrayList<Equipo> {
     }
     
     public Partido[] generarPartidos() {
-        Collections.shuffle(this);
-        int numeroDeEquipos = this.size();
+        List<Equipo> listaEquipos = Arrays.asList(losEquipos);
+        Collections.shuffle(listaEquipos);
+        int numeroDeEquipos = losEquipos.length;
         Partido[] losPartidos = new Partido[numeroDeEquipos / 2];
         
         for(int i = 0, n = 0; i < numeroDeEquipos; i++, n++)
-            losPartidos[n] = new Partido(this.get(i), generaAletorio(4),
-                                                            this.get(++i), generaAletorio(4));
+            losPartidos[n] = new Partido(listaEquipos.get(i), generaAletorio(4),
+                                                            listaEquipos.get(++i), generaAletorio(4));
         
         return losPartidos;
     }
