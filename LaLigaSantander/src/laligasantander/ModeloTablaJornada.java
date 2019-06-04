@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author tarod
  */
 public class ModeloTablaJornada extends DefaultTableModel {
-    Partido[] losPartidos;
+    private final Partido[] losPartidos;
 
     public ModeloTablaJornada(Partido[] losPartidos) {
         this.losPartidos = losPartidos;
@@ -53,16 +53,16 @@ public class ModeloTablaJornada extends DefaultTableModel {
     }
 
     @Override
-    public boolean isCellEditable(int numeroColumna, int numeroFila) {
+    public boolean isCellEditable(int numeroFila, int numeroColumna) {
         return false;
     }
 
     @Override
-    public Object getValueAt(int numeroColumna, int numeroFila) {
+    public Object getValueAt(int numeroFila, int numeroColumna) {
         Object[] datos = {
-            losPartidos[numeroFila].getEquipoLocal(),
+            losPartidos[numeroFila].getEquipoLocal().getNombre(),
             losPartidos[numeroFila].getResultadoLocal(),
-            losPartidos[numeroFila].getEquipoContrincante(),
+            losPartidos[numeroFila].getEquipoContrincante().getNombre(),
             losPartidos[numeroFila].getResultadoContrincante()
         };
         
