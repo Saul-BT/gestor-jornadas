@@ -13,13 +13,15 @@ import java.util.Arrays;
  */
 public class Ventana extends javax.swing.JFrame {
 
+    private final Equipo[] losEquipos;
     private final GestoraEquipo gestoraEquipos;
     
     /**
      * Creates new form Ventana
      */
     public Ventana() {
-        gestoraEquipos = new GestoraEquipo(GestoraAlmacenamiento.leerEquipos());
+        losEquipos = GestoraAlmacenamiento.leerEquipos();
+        gestoraEquipos = new GestoraEquipo(losEquipos);
         initComponents();
     }
 
@@ -99,14 +101,7 @@ public class Ventana extends javax.swing.JFrame {
         });
 
         tablaClasificacion.setAutoCreateRowSorter(true);
-        tablaClasificacion.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-
-            }
-        ));
+        tablaClasificacion.setModel(new ModeloTablaClasificacion(losEquipos));
         jScrollPane2.setViewportView(tablaClasificacion);
 
         javax.swing.GroupLayout jpClasificacionLayout = new javax.swing.GroupLayout(jpClasificacion);
@@ -144,7 +139,6 @@ public class Ventana extends javax.swing.JFrame {
 
     private void jpClasificacionComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jpClasificacionComponentShown
         Arrays.sort(gestoraEquipos.getLosEquipos());
-        tablaClasificacion.setModel(new ModeloTablaClasificacion(gestoraEquipos.getLosEquipos()));
     }//GEN-LAST:event_jpClasificacionComponentShown
 
     private void bGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarActionPerformed
@@ -152,7 +146,7 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_bGenerarActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        GestoraAlmacenamiento.escribirEquipos(gestoraEquipos.getLosEquipos());
+        GestoraAlmacenamiento.escribirEquipos(losEquipos);
         System.exit(0);
     }//GEN-LAST:event_formWindowClosing
 
