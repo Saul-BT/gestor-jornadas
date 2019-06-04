@@ -11,10 +11,13 @@ package laligasantander;
  */
 public class Ventana extends javax.swing.JFrame {
 
+    private final GestoraEquipo gestoraEquipos;
+    
     /**
      * Creates new form Ventana
      */
     public Ventana() {
+        gestoraEquipos = new GestoraEquipo(GestoraAlmacenamiento.leerEquipos());
         initComponents();
     }
 
@@ -27,21 +30,117 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jpGenerarJornada = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaPartidos = new javax.swing.JTable();
+        bGenerar = new javax.swing.JButton();
+        jpClasificacion = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablaClasificacion = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        tablaPartidos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tablaPartidos);
+
+        bGenerar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        bGenerar.setText("GENERAR");
+        bGenerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bGenerarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpGenerarJornadaLayout = new javax.swing.GroupLayout(jpGenerarJornada);
+        jpGenerarJornada.setLayout(jpGenerarJornadaLayout);
+        jpGenerarJornadaLayout.setHorizontalGroup(
+            jpGenerarJornadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGenerarJornadaLayout.createSequentialGroup()
+                .addGroup(jpGenerarJornadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpGenerarJornadaLayout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpGenerarJornadaLayout.createSequentialGroup()
+                        .addGap(277, 277, 277)
+                        .addComponent(bGenerar)))
+                .addContainerGap(132, Short.MAX_VALUE))
+        );
+        jpGenerarJornadaLayout.setVerticalGroup(
+            jpGenerarJornadaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGenerarJornadaLayout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66)
+                .addComponent(bGenerar)
+                .addContainerGap(117, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Generar Jornada", jpGenerarJornada);
+
+        jpClasificacion.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jpClasificacionComponentShown(evt);
+            }
+        });
+
+        tablaClasificacion.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane2.setViewportView(tablaClasificacion);
+
+        javax.swing.GroupLayout jpClasificacionLayout = new javax.swing.GroupLayout(jpClasificacion);
+        jpClasificacion.setLayout(jpClasificacionLayout);
+        jpClasificacionLayout.setHorizontalGroup(
+            jpClasificacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpClasificacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpClasificacionLayout.setVerticalGroup(
+            jpClasificacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpClasificacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 561, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Clasificación", jpClasificacion);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 616, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 556, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jpClasificacionComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jpClasificacionComponentShown
+        tablaClasificacion.setModel(new ModeloTablaClasificacion(gestoraEquipos.getLosEquipos()));
+    }//GEN-LAST:event_jpClasificacionComponentShown
+
+    private void bGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarActionPerformed
+        tablaPartidos.setModel(new ModeloTablaJornada(gestoraEquipos.generarPartidos()));
+    }//GEN-LAST:event_bGenerarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +178,13 @@ public class Ventana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bGenerar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel jpClasificacion;
+    private javax.swing.JPanel jpGenerarJornada;
+    private javax.swing.JTable tablaClasificacion;
+    private javax.swing.JTable tablaPartidos;
     // End of variables declaration//GEN-END:variables
 }
