@@ -57,8 +57,8 @@ public class GestoraEquipo {
             equipoContrincante.setPartidosGanados(equipoContrincante.getPartidosGanados() + 1);
             equipoLocal.setPartidosPerdidos(equipoLocal.getPartidosPerdidos() + 1);
         } else { // Si han empatado
-            equipoLocal.setPartidosEmpatados(equipoLocal.getPartidosEmpatados()+ 1);
-            equipoContrincante.setPartidosEmpatados(equipoContrincante.getPartidosEmpatados()+ 1);
+            equipoLocal.setPartidosEmpatados(equipoLocal.getPartidosEmpatados() + 1);
+            equipoContrincante.setPartidosEmpatados(equipoContrincante.getPartidosEmpatados() + 1);
         }
     }
 
