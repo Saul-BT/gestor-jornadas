@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
  * @author tarod
  */
 public class ModeloTablaClasificacion extends DefaultTableModel {
-    Equipo[] losEquipos;
+    private final Equipo[] losEquipos;
 
     public ModeloTablaClasificacion(Equipo[] losEquipos) {
         this.losEquipos = losEquipos;
@@ -42,9 +42,14 @@ public class ModeloTablaClasificacion extends DefaultTableModel {
     @Override
     public Class<?> getColumnClass(int numeroColumna) {
         Class[] clases = {
-            String.class,
             Integer.class,
             String.class,
+            Integer.class,
+            Integer.class,
+            Integer.class,
+            Integer.class,
+            Integer.class,
+            Integer.class,
             Integer.class
         };
         
@@ -52,14 +57,14 @@ public class ModeloTablaClasificacion extends DefaultTableModel {
     }
 
     @Override
-    public boolean isCellEditable(int numeroColumna, int numeroFila) {
+    public boolean isCellEditable(int numeroFila, int numeroColumna) {
         return false;
     }
 
     @Override
-    public Object getValueAt(int numeroColumna, int numeroFila) {
+    public Object getValueAt(int numeroFila, int numeroColumna) {
         Object[] datos = {
-            numeroFila,
+            numeroFila + 1,
             losEquipos[numeroFila].getNombre(),
             losEquipos[numeroFila].getPartidosJugados(),
             losEquipos[numeroFila].getPartidosGanados(),
