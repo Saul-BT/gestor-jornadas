@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_171" class="java.beans.XMLDecoder">
+ <array class="laligasantander.Equipo" length="20">
+  <void index="0">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>90</int>
+    </void>
+    <void property="golesEnContra">
+     <int>36</int>
+    </void>
+    <void property="nombre">
+     <string>Barcelona</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>9</int>
+    </void>
+    <void property="partidosGanados">
+     <int>26</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>3</int>
+    </void>
+   </object>
+  </void>
+  <void index="1">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>55</int>
+    </void>
+    <void property="golesEnContra">
+     <int>29</int>
+    </void>
+    <void property="nombre">
+     <string>Atlético</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>10</int>
+    </void>
+    <void property="partidosGanados">
+     <int>22</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>6</int>
+    </void>
+   </object>
+  </void>
+  <void index="2">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>63</int>
+    </void>
+    <void property="golesEnContra">
+     <int>46</int>
+    </void>
+    <void property="nombre">
+     <string>Real Madrid</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>5</int>
+    </void>
+    <void property="partidosGanados">
+     <int>21</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>12</int>
+    </void>
+   </object>
+  </void>
+  <void index="3">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>51</int>
+    </void>
+    <void property="golesEnContra">
+     <int>35</int>
+    </void>
+    <void property="nombre">
+     <string>Valencia</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>16</int>
+    </void>
+    <void property="partidosGanados">
+     <int>15</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>7</int>
+    </void>
+   </object>
+  </void>
+  <void index="4">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>48</int>
+    </void>
+    <void property="golesEnContra">
+     <int>35</int>
+    </void>
+    <void property="nombre">
+     <string>Getafe</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>14</int>
+    </void>
+    <void property="partidosGanados">
+     <int>15</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>9</int>
+    </void>
+   </object>
+  </void>
+  <void index="5">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>62</int>
+    </void>
+    <void property="golesEnContra">
+     <int>47</int>
+    </void>
+    <void property="nombre">
+     <string>Sevilla</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>8</int>
+    </void>
+    <void property="partidosGanados">
+     <int>17</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>13</int>
+    </void>
+   </object>
+  </void>
+  <void index="6">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>48</int>
+    </void>
+    <void property="golesEnContra">
+     <int>50</int>
+    </void>
+    <void property="nombre">
+     <string>Espanyol</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>14</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>13</int>
+    </void>
+   </object>
+  </void>
+  <void index="7">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>41</int>
+    </void>
+    <void property="golesEnContra">
+     <int>45</int>
+    </void>
+    <void property="nombre">
+     <string>Athletic</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>14</int>
+    </void>
+    <void property="partidosGanados">
+     <int>13</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>11</int>
+    </void>
+   </object>
+  </void>
+  <void index="8">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>45</int>
+    </void>
+    <void property="golesEnContra">
+     <int>46</int>
+    </void>
+    <void property="nombre">
+     <string>R. Sociedad</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>13</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>14</int>
+    </void>
+   </object>
+  </void>
+  <void index="9">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>44</int>
+    </void>
+    <void property="golesEnContra">
+     <int>52</int>
+    </void>
+    <void property="nombre">
+     <string>Betis</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>8</int>
+    </void>
+    <void property="partidosGanados">
+     <int>14</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>16</int>
+    </void>
+   </object>
+  </void>
+  <void index="10">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>39</int>
+    </void>
+    <void property="golesEnContra">
+     <int>50</int>
+    </void>
+    <void property="nombre">
+     <string>Alavés</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>13</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>14</int>
+    </void>
+   </object>
+  </void>
+  <void index="11">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>46</int>
+    </void>
+    <void property="golesEnContra">
+     <int>50</int>
+    </void>
+    <void property="nombre">
+     <string>Eibar</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>14</int>
+    </void>
+    <void property="partidosGanados">
+     <int>11</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>13</int>
+    </void>
+   </object>
+  </void>
+  <void index="12">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>37</int>
+    </void>
+    <void property="golesEnContra">
+     <int>43</int>
+    </void>
+    <void property="nombre">
+     <string>Leganés</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>12</int>
+    </void>
+    <void property="partidosGanados">
+     <int>11</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>15</int>
+    </void>
+   </object>
+  </void>
+  <void index="13">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>49</int>
+    </void>
+    <void property="golesEnContra">
+     <int>52</int>
+    </void>
+    <void property="nombre">
+     <string>Villarreal</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>14</int>
+    </void>
+    <void property="partidosGanados">
+     <int>10</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>14</int>
+    </void>
+   </object>
+  </void>
+  <void index="14">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>59</int>
+    </void>
+    <void property="golesEnContra">
+     <int>66</int>
+    </void>
+    <void property="nombre">
+     <string>Levante</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>11</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>16</int>
+    </void>
+   </object>
+  </void>
+  <void index="15">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>32</int>
+    </void>
+    <void property="golesEnContra">
+     <int>51</int>
+    </void>
+    <void property="nombre">
+     <string>Valladolid</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>10</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>17</int>
+    </void>
+   </object>
+  </void>
+  <void index="16">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>53</int>
+    </void>
+    <void property="golesEnContra">
+     <int>62</int>
+    </void>
+    <void property="nombre">
+     <string>Celta</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>11</int>
+    </void>
+    <void property="partidosGanados">
+     <int>10</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>17</int>
+    </void>
+   </object>
+  </void>
+  <void index="17">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>37</int>
+    </void>
+    <void property="golesEnContra">
+     <int>53</int>
+    </void>
+    <void property="nombre">
+     <string>Girona</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>10</int>
+    </void>
+    <void property="partidosGanados">
+     <int>9</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>19</int>
+    </void>
+   </object>
+  </void>
+  <void index="18">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>43</int>
+    </void>
+    <void property="golesEnContra">
+     <int>65</int>
+    </void>
+    <void property="nombre">
+     <string>Huesca</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>12</int>
+    </void>
+    <void property="partidosGanados">
+     <int>7</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>19</int>
+    </void>
+   </object>
+  </void>
+  <void index="19">
+   <object class="laligasantander.Equipo">
+    <void property="golesAFavor">
+     <int>41</int>
+    </void>
+    <void property="golesEnContra">
+     <int>70</int>
+    </void>
+    <void property="nombre">
+     <string>Rayo</string>
+    </void>
+    <void property="partidosEmpatados">
+     <int>8</int>
+    </void>
+    <void property="partidosGanados">
+     <int>8</int>
+    </void>
+    <void property="partidosPerdidos">
+     <int>22</int>
+    </void>
+   </object>
+  </void>
+ </array>
+</java>
