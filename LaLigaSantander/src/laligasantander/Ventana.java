@@ -39,7 +39,12 @@ public class Ventana extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaClasificacion = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         tablaPartidos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,6 +146,11 @@ public class Ventana extends javax.swing.JFrame {
     private void bGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bGenerarActionPerformed
         tablaPartidos.setModel(new ModeloTablaJornada(gestoraEquipos.generarPartidos()));
     }//GEN-LAST:event_bGenerarActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        GestoraAlmacenamiento.escribirEquipos(gestoraEquipos.getLosEquipos());
+        System.exit(0);
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
